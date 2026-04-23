@@ -174,12 +174,24 @@
             <h2>Einstellungen</h2>
             <div class="setting-item">
                 <h3>Anmeldung</h3>
-                <form id="login-form">
-                    <input type="text" id="username" placeholder="Benutzername" required>
-                    <input type="password" id="password" placeholder="Passwort" required>
-                    <button type="submit">Anmelden</button>
-                </form>
-                <p id="login-status"></p>
+                <div id="login-section">
+                    <form id="login-form">
+                        <input type="text" id="username" placeholder="Benutzername" required>
+                        <input type="password" id="password" placeholder="Passwort" required>
+                        <button type="submit">Anmelden</button>
+                    </form>
+                    <button id="show-register" onclick="showRegister()">Registrieren</button>
+                    <p id="login-status"></p>
+                </div>
+                <div id="register-section" style="display: none;">
+                    <form id="register-form">
+                        <input type="text" id="reg-username" placeholder="Neuer Benutzername" required>
+                        <input type="password" id="reg-password" placeholder="Neues Passwort" required>
+                        <button type="submit">Konto erstellen</button>
+                    </form>
+                    <button id="show-login" onclick="showLogin()">Zurück zur Anmeldung</button>
+                    <p id="register-status"></p>
+                </div>
             </div>
             <div class="setting-item">
                 <h3>Darkmode</h3>
