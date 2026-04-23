@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektro-Formeln | Interaktive Lernkarten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <button class="settings-btn" onclick="openSettings()">⚙️ Einstellungen</button>
+        <div class="logo-container">
+            <span class="ckw-logo">CKW</span>
+        </div>
+        <h1>⚡ Elektro-Formeln Meister</h1>
+        <p class="subtitle">Lernkarten für Elektroinstallateur-Lehrlinge</p>
+        <p class="description">Klicke auf eine Karte, um die Erklärung und Umformungen zu sehen!</p>
+    </div>
+    <div class="container">
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>⚡ Ohm'sches Gesetz</h2>
+                    <p>U = I × R</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Ohm'sches Gesetz</h2>
+                    <p>Die Spannung U ist gleich dem Produkt aus Stromstärke I und Widerstand R.</p>
+                    <p>Umformungen:</p>
+                    <ul>
+                        <li>I = U / R</li>
+                        <li>R = U / I</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>💡 Leistung</h2>
+                    <p>P = U × I</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Leistung</h2>
+                    <p>Die Leistung P ist die Energie pro Zeit. Sie kann auf verschiedene Weisen berechnet werden.</p>
+                    <p>Umformungen:</p>
+                    <ul>
+                        <li>P = I² × R</li>
+                        <li>P = U² / R</li>
+                        <li>U = P / I</li>
+                        <li>I = P / U</li>
+                        <li>R = P / I²</li>
+                        <li>R = U² / P</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>🔌 Widerstand in Reihe</h2>
+                    <p>R_ges = R1 + R2 + ...</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Widerstand in Reihe</h2>
+                    <p>Bei Reihenschaltung addieren sich die Widerstände.</p>
+                    <p>Keine Umformungen nötig, da es die Grundform ist.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>🔌 Widerstand parallel</h2>
+                    <p>1/R_ges = 1/R1 + 1/R2 + ...</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Widerstand parallel</h2>
+                    <p>Bei Parallelschaltung addieren sich die Leitwerte (1/R).</p>
+                    <p>Umformung: R_ges = 1 / (1/R1 + 1/R2 + ...)</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>🔋 Kapazität parallel</h2>
+                    <p>C_ges = C1 + C2 + ...</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Kapazität parallel</h2>
+                    <p>Bei Parallelschaltung addieren sich die Kapazitäten.</p>
+                    <p>Keine Umformungen nötig.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>🔋 Kapazität in Reihe</h2>
+                    <p>1/C_ges = 1/C1 + 1/C2 + ...</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Kapazität in Reihe</h2>
+                    <p>Bei Reihenschaltung addieren sich die Kehrwerte der Kapazitäten.</p>
+                    <p>Umformung: C_ges = 1 / (1/C1 + 1/C2 + ...)</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>🌀 Induktivität in Reihe</h2>
+                    <p>L_ges = L1 + L2 + ...</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Induktivität in Reihe</h2>
+                    <p>Bei Reihenschaltung addieren sich die Induktivitäten.</p>
+                    <p>Keine Umformungen nötig.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>🌀 Induktivität parallel</h2>
+                    <p>1/L_ges = 1/L1 + 1/L2 + ...</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Induktivität parallel</h2>
+                    <p>Bei Parallelschaltung addieren sich die Kehrwerte der Induktivitäten.</p>
+                    <p>Umformung: L_ges = 1 / (1/L1 + 1/L2 + ...)</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>📊 Effektivwert (Wechselstrom)</h2>
+                    <p>U_eff = U_max / √2</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Effektivwert (Wechselstrom)</h2>
+                    <p>Der Effektivwert ist der quadratische Mittelwert der Spannung.</p>
+                    <p>Umformungen:</p>
+                    <ul>
+                        <li>U_max = U_eff × √2</li>
+                        <li>Gleiches gilt für Strom: I_eff = I_max / √2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>⚙️ Leistungsfaktor</h2>
+                    <p>cos φ = P / S</p>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Leistungsfaktor</h2>
+                    <p>Der Leistungsfaktor gibt das Verhältnis von Wirkleistung P zu Scheinleistung S an.</p>
+                    <p>Umformungen:</p>
+                    <ul>
+                        <li>P = S × cos φ</li>
+                        <li>S = P / cos φ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSettings()">&times;</span>
+            <h2>Einstellungen</h2>
+            <div class="setting-item">
+                <h3>Anmeldung</h3>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Benutzername" required>
+                    <input type="password" id="password" placeholder="Passwort" required>
+                    <button type="submit">Anmelden</button>
+                </form>
+                <p id="login-status"></p>
+            </div>
+            <div class="setting-item">
+                <h3>Darkmode</h3>
+                <label class="switch">
+                    <input type="checkbox" id="darkmode-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

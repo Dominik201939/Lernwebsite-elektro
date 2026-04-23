@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.header {
+    margin-bottom: 50px;
+    animation: fadeInDown 0.8s ease;
+    position: relative;
+}
+
+.settings-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.settings-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.ckw-logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    /* Logo als Text ohne Hintergrund */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.3);
+    font-size: 3em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.description {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 280px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flip-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.flip-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.flip-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.flip-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.flip-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.flip-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.flip-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.flip-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.flip-card:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.flip-card:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.flip-card:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.flip-card-front {
+    background: linear-gradient(145deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(30, 60, 114, 0.3);
+}
+
+.flip-card-front h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.flip-card-front p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.flip-card-back {
+    background: linear-gradient(145deg, #e8f1f8 0%, #c5dff8 50%, #a8d5f7 100%);
+    color: #1e3c72;
+    transform: rotateY(180deg);
+    box-shadow: 0 12px 24px rgba(42, 82, 152, 0.3);
+    overflow-y: auto;
+}
+
+.flip-card-back h2 {
+    margin: 0 0 10px 0;
+    color: #1e3c72;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.5);
+}
+
+.flip-card-back p {
+    margin: 8px 0;
+    color: #1e3c72;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.flip-card-back ul {
+    list-style: none;
+    padding: 0;
+    color: #1e3c72;
+}
+
+.flip-card-back li {
+    margin: 6px 0;
+    font-size: 0.95em;
+    background: rgba(30, 60, 114, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-left: 3px solid rgba(30, 60, 114, 0.5);
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    .subtitle {
+        font-size: 1.2em;
+    }
+    
+    .flip-card {
+        height: 250px;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 50%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .header {
+    color: #e0e0e0;
+}
+
+body.dark-mode h1 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .subtitle,
+body.dark-mode .description {
+    color: rgba(224,224,224,0.9);
+}
+
+body.dark-mode .settings-btn {
+    background: rgba(0,0,0,0.3);
+    color: #e0e0e0;
+}
+
+body.dark-mode .settings-btn:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+body.dark-mode .modal-content {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .setting-item h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode #login-form input {
+    background-color: #3a3a3a;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode #login-form input::placeholder {
+    color: #aaa;
+}
+
+body.dark-mode .flip-card-front {
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .flip-card-back {
+    background: linear-gradient(145deg, #2a2a3e 0%, #3a3a5e 50%, #4a4a6e 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .flip-card-back h2,
+body.dark-mode .flip-card-back p,
+body.dark-mode .flip-card-back ul {
+    color: #e0e0e0;
+}
+
+body.dark-mode .ckw-logo {
+    filter: brightness(1); /* Normales Logo für Darkmode */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-item h3 {
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#login-form button {
+    padding: 10px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login-form button:hover {
+    background-color: #2a5298;
+}
+
+#login-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1e3c72;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
