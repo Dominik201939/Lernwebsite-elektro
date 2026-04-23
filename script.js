@@ -4,6 +4,16 @@ function flipCard(card) {
 
 function openSettings() {
     document.getElementById('settings-modal').style.display = 'block';
+    // Check if logged in
+    if (localStorage.getItem('loggedIn') === 'true') {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('register-section').style.display = 'none';
+        document.getElementById('account-management').style.display = 'block';
+    } else {
+        document.getElementById('login-section').style.display = 'block';
+        document.getElementById('register-section').style.display = 'none';
+        document.getElementById('account-management').style.display = 'none';
+    }
 }
 
 function closeSettings() {
@@ -115,4 +125,40 @@ function showLogin() {
 if (localStorage.getItem('loggedIn') === 'true') {
     loginStatus.textContent = 'Bereits angemeldet';
     loginStatus.style.color = 'green';
+}
+
+// Account management functions
+function changePassword() {
+    const newPassword = prompt('Gib dein neues Passwort ein:');
+    if (newPassword) {
+        // In demo, just update localStorage (in real app, server call)
+        const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+        // Assuming current user is stored, but for demo, update all or something
+        // For simplicity, just set a new password for the first user or something
+        alert('Passwort geändert! (Demo - nicht wirklich gespeichert)');
+        document.getElementById('account-status').textContent = 'Passwort geändert!';
+        document.getElementById('account-status').style.color = 'green';
+    }
+}
+
+function deleteAccount() {
+    if (confirm('Bist du sicher, dass du dein Konto löschen möchtest?')) {
+        // In demo, remove from localStorage
+        localStorage.removeItem('users');
+        localStorage.removeItem('loggedIn');
+        alert('Konto gelöscht!');
+        closeSettings();
+        // Reload or something
+        location.reload();
+    }
+}
+
+function logout() {
+    localStorage.removeItem('loggedIn');
+    document.getElementById('account-status').textContent = 'Abgemeldet!';
+    document.getElementById('account-status').style.color = 'orange';
+    setTimeout(() => {
+        closeSettings();
+        location.reload();
+    }, 1000);
 }

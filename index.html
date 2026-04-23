@@ -193,12 +193,12 @@
                     <p id="register-status"></p>
                 </div>
             </div>
-            <div class="setting-item">
-                <h3>Darkmode</h3>
-                <label class="switch">
-                    <input type="checkbox" id="darkmode-toggle">
-                    <span class="slider"></span>
-                </label>
+            <div class="setting-item" id="account-management" style="display: none;">
+                <h3>Konto verwalten</h3>
+                <button onclick="changePassword()">Passwort ändern</button>
+                <button onclick="deleteAccount()">Konto löschen</button>
+                <button onclick="logout()">Abmelden</button>
+                <p id="account-status"></p>
             </div>
         </div>
     </div>

@@ -416,6 +416,21 @@ body.dark-mode .ckw-logo {
     background-color: #e0e0e0;
 }
 
+#account-management button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#account-management button:hover {
+    background-color: #2a5298;
+}
+
 #login-status {
     margin-top: 10px;
     font-weight: bold;
