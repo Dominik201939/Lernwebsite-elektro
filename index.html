@@ -67,8 +67,13 @@
                         <p>Die Leistung ist die Energie pro Zeit.</p>
                         <p><strong>Umformungen:</strong></p>
                         <ul>
+                            <li>P = U × I</li>
                             <li>P = R × I²</li>
                             <li>P = U² / R</li>
+                            <li>U = P / I</li>
+                            <li>I = P / U</li>
+                            <li>R = U² / P</li>
+                            <li>R = P / I²</li>
                         </ul>
                     </div>
                 </div>
@@ -86,7 +91,10 @@
                         <p>Energie ist Leistung mal Zeit.</p>
                         <p><strong>Umformungen:</strong></p>
                         <ul>
+                            <li>W = P × t</li>
                             <li>W = U × I × t</li>
+                            <li>P = W / t</li>
+                            <li>t = W / P</li>
                         </ul>
                     </div>
                 </div>
@@ -102,10 +110,12 @@
                     <div class="flip-card-back">
                         <h2>Widerstand (Material)</h2>
                         <p>Der Widerstand hängt vom spezifischen Widerstand ρ, der Länge l und dem Querschnitt A ab.</p>
+                        <p><strong>Umformungen:</strong></p>
                         <ul>
-                            <li>ρ = spezifischer Widerstand</li>
-                            <li>l = Länge des Leiters</li>
-                            <li>A = Querschnittsfläche</li>
+                            <li>R = ρ × (l / A)</li>
+                            <li>ρ = R × A / l</li>
+                            <li>l = R × A / ρ</li>
+                            <li>A = ρ × l / R</li>
                         </ul>
                     </div>
                 </div>
@@ -159,10 +169,11 @@
                     <div class="flip-card-back">
                         <h2>Ladung</h2>
                         <p>Die Ladung ist Stromstärke mal Zeit.</p>
+                        <p><strong>Umformungen:</strong></p>
                         <ul>
-                            <li>Q = Ladung (Coulomb)</li>
-                            <li>I = Stromstärke (Ampere)</li>
-                            <li>t = Zeit (Sekunden)</li>
+                            <li>Q = I × t</li>
+                            <li>I = Q / t</li>
+                            <li>t = Q / I</li>
                         </ul>
                     </div>
                 </div>
@@ -178,10 +189,11 @@
                     <div class="flip-card-back">
                         <h2>Spannung (Definition)</h2>
                         <p>Spannung ist Energie pro Ladung.</p>
+                        <p><strong>Umformungen:</strong></p>
                         <ul>
-                            <li>U = Spannung (Volt)</li>
-                            <li>W = Energie (Joule)</li>
-                            <li>Q = Ladung (Coulomb)</li>
+                            <li>U = W / Q</li>
+                            <li>W = U × Q</li>
+                            <li>Q = W / U</li>
                         </ul>
                     </div>
                 </div>
@@ -197,10 +209,11 @@
                     <div class="flip-card-back">
                         <h2>Wirkungsgrad</h2>
                         <p>Der Wirkungsgrad beschreibt, wie viel der zugeführten Leistung in nutzbare Leistung umgewandelt wird.</p>
+                        <p><strong>Umformungen:</strong></p>
                         <ul>
-                            <li>η = Wirkungsgrad (0-1 oder %)</li>
-                            <li>Pab = abgegebene Leistung</li>
-                            <li>Pzu = zugeführte Leistung</li>
+                            <li>η = Pab / Pzu</li>
+                            <li>Pab = η × Pzu</li>
+                            <li>Pzu = Pab / η</li>
                         </ul>
                     </div>
                 </div>
