@@ -106,49 +106,93 @@ h1 {
 
 .lehrjahr-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
     margin-bottom: 40px;
+    padding: 40px 20px;
 }
 
 .lehrjahr-btn {
-    padding: 30px 20px;
-    font-size: 1.3em;
+    padding: 50px 30px;
+    font-size: 1.8em;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(145deg, #1e3c72 0%, #2a5298 100%);
-    border: 2px solid rgba(255,255,255,0.3);
-    border-radius: 15px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     animation: fadeInUp 0.8s ease backwards;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lehrjahr-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transition: left 0.4s ease;
+    z-index: 1;
+}
+
+.lehrjahr-btn:hover::before {
+    left: 100%;
+}
+
+.lehrjahr-btn span {
+    position: relative;
+    z-index: 2;
 }
 
 .lehrjahr-btn:nth-child(1) {
+    background: linear-gradient(135deg, #FF6B6B 0%, #EE5A52 100%);
     animation-delay: 0.1s;
 }
 
 .lehrjahr-btn:nth-child(2) {
+    background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
     animation-delay: 0.2s;
 }
 
 .lehrjahr-btn:nth-child(3) {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
     animation-delay: 0.3s;
+    color: #1a1a1a;
 }
 
 .lehrjahr-btn:nth-child(4) {
+    background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
     animation-delay: 0.4s;
 }
 
-.lehrjahr-btn:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-    background: linear-gradient(145deg, #2a5298 0%, #3a6cb2 100%);
+.lehrjahr-btn:nth-child(1):hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 45px rgba(255, 107, 107, 0.4);
+}
+
+.lehrjahr-btn:nth-child(2):hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 45px rgba(78, 205, 196, 0.4);
+}
+
+.lehrjahr-btn:nth-child(3):hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 45px rgba(255, 159, 28, 0.4);
+}
+
+.lehrjahr-btn:nth-child(4):hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 25px 45px rgba(155, 89, 182, 0.4);
 }
 
 .lehrjahr-btn:active {
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(0.98);
 }
 
 /* Back Button */
