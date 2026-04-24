@@ -2,6 +2,19 @@ function flipCard(card) {
     card.classList.toggle('flipped');
 }
 
+// Navigation functions
+function selectLehrjahr(lehrjahr) {
+    document.getElementById('home-page').style.display = 'none';
+    document.getElementById('formulas-page').style.display = 'block';
+    document.getElementById('lehrjahr-title').textContent = `Formeln - ${lehrjahr}. Lehrjahr`;
+    localStorage.setItem('selectedLehrjahr', lehrjahr);
+}
+
+function goHome() {
+    document.getElementById('formulas-page').style.display = 'none';
+    document.getElementById('home-page').style.display = 'block';
+}
+
 function openSettings() {
     document.getElementById('settings-modal').style.display = 'block';
     // Check if logged in
