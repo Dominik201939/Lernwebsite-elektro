@@ -249,15 +249,15 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <h2>🔌 Ein/Aus-Schaltung</h2>
-                        <p>Einfacher Schalter</p>
+                        <p><strong>Sch1</strong></p>
                     </div>
                     <div class="flip-card-back">
-                        <h2>Ein/Aus-Schaltung</h2>
+                        <h2>Ein/Aus-Schaltung (Sch1)</h2>
                         <p>Die einfachste Schaltung: ein Schalter steuert ein Gerät.</p>
                         <ul>
-                            <li>Ein Schalter trennt/verbindet den Stromkreis</li>
-                            <li>Der Schalter ist in Serie mit dem Verbraucher</li>
-                            <li>Anwendung: Lampe, Motor, etc.</li>
+                            <li><strong>Sch1:</strong> Ein Schalter trennt/verbindet Stromkreis</li>
+                            <li>Schalter in Serie mit dem Verbraucher</li>
+                            <li>Anwendung: Lampe, Motor, einfaches Gerät</li>
                             <li>Symbol: Einfacher Schalter ─o─</li>
                         </ul>
                     </div>
@@ -289,15 +289,15 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <h2>🔄 Wechselschaltung</h2>
-                        <p>2 Schalter steuern 1 Lampe</p>
+                        <p><strong>Sch2</strong></p>
                     </div>
                     <div class="flip-card-back">
-                        <h2>Wechselschaltung</h2>
+                        <h2>Wechselschaltung (Sch2)</h2>
                         <p>Zwei Schalter an verschiedenen Orten steuern das gleiche Gerät.</p>
                         <ul>
-                            <li>2 Umschalter (Wechselschalter) an 2 Orten</li>
+                            <li><strong>Sch2:</strong> 2 Umschalter an 2 verschiedenen Orten</li>
                             <li>Von beiden Stellen EIN und AUS möglich</li>
-                            <li>Anwendung: Treppenhaus, Flur</li>
+                            <li>Anwendung: Treppenhaus, Flur (2 Lichtschalter)</li>
                             <li>Verdrahtung: Cross-Connection zwischen den Schaltern</li>
                         </ul>
                     </div>
@@ -309,13 +309,13 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <h2>✕ Kreuzschaltung</h2>
-                        <p>3 oder mehr Schalter</p>
+                        <p><strong>Sch3</strong></p>
                     </div>
                     <div class="flip-card-back">
-                        <h2>Kreuzschaltung</h2>
+                        <h2>Kreuzschaltung (Sch3)</h2>
                         <p>Drei oder mehr Schalter an verschiedenen Orten steuern das gleiche Gerät.</p>
                         <ul>
-                            <li>Mindestens 2 Wechselschalter + Kreuzschalter(n)</li>
+                            <li><strong>Sch3:</strong> Mindestens 2 Wechselschalter + Kreuzschalter(n)</li>
                             <li>Von allen Stellen EIN und AUS möglich</li>
                             <li>Anwendung: Lange Flure, Galerien, 3+ Etagen</li>
                             <li>Der Kreuzschalter invertiert das Signal</li>
@@ -324,27 +324,82 @@
                 </div>
             </div>
 
-            <!-- Reihen- und Parallelschaltung Kombiniert -->
+            <!-- Reihen- und Parallelschaltung -->
             <div class="flip-card" onclick="flipCard(this)">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <h2>🔗 Gemischte Schaltung</h2>
-                        <p>Reihen + Parallel</p>
+                        <h2>🔗 Reihen- & Parallelschaltung</h2>
+                        <p><strong>Sch5 & Sch6</strong></p>
                     </div>
                     <div class="flip-card-back">
-                        <h2>Gemischte Schaltung (Reihen + Parallel)</h2>
-                        <p>Kombination aus Reihen- und Parallelschaltung.</p>
+                        <h2>Reihen- & Parallelschaltung</h2>
+                        <p><strong>Sch5 - Reihenschaltung:</strong> Mehrere Verbraucher in Reihe</p>
+                        <p><strong>Sch6 - Parallelschaltung:</strong> Mehrere Verbraucher parallel</p>
                         <ul>
-                            <li>Erst Reihen berechnen: R1 + R2 = Rx</li>
-                            <li>Dann Parallel: 1/Rges = 1/Rx + 1/R3</li>
-                            <li>Oder umgekehrt, je nach Schaltbild</li>
-                            <li>Praktisch: Most real-world circuits use this</li>
+                            <li><strong>Sch5 (Reihe):</strong> Rges = R1 + R2 + R3</li>
+                            <li><strong>Sch6 (Parallel):</strong> 1/Rges = 1/R1 + 1/R2</li>
+                            <li>Sch5: Wenn eine Lampe ausfällt, alle aus</li>
+                            <li>Sch6: Unabhängige Verbraucher, praktisch in Häusern</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-    <!-- Settings Modal -->
+        <!-- Schemaarten Section -->
+        <div class="schemaarten-section">
+            <h2>📋 Schemaarten - Übersicht</h2>
+            <p>Die folgenden Schemaarten sind standardisierte Schaltschemen in der Elektrotechnik:</p>
+            
+            <div class="schema-grid">
+                <div class="schema-card">
+                    <h3>Sch1: Ein/Aus-Schaltung</h3>
+                    <p>Ein einzelner Schalter steuert einen Verbraucher (z.B. Lampe).</p>
+                    <ul>
+                        <li>Einfachste Form</li>
+                        <li>1 Schalter + 1 Verbraucher</li>
+                        <li>Anwendung: Einfache Deckenlampe</li>
+                    </ul>
+                </div>
+                <div class="schema-card">
+                    <h3>Sch2: Wechselschaltung</h3>
+                    <p>Zwei Schalter an verschiedenen Orten steuern einen Verbraucher unabhängig voneinander.</p>
+                    <ul>
+                        <li>2 Umschalter (Wechselschalter)</li>
+                        <li>Von beiden Orten EIN/AUS möglich</li>
+                        <li>Anwendung: Treppenhaus, Langer Flur</li>
+                    </ul>
+                </div>
+                <div class="schema-card">
+                    <h3>Sch3: Kreuzschaltung</h3>
+                    <p>Drei oder mehr Schalter an verschiedenen Orten steuern einen Verbraucher unabhängig.</p>
+                    <ul>
+                        <li>2 Wechselschalter + mindestens 1 Kreuzschalter</li>
+                        <li>Von allen Orten EIN/AUS möglich</li>
+                        <li>Anwendung: Lange Flure, mehrere Etagen</li>
+                    </ul>
+                </div>
+                <div class="schema-card">
+                    <h3>Sch5: Reihenschaltung</h3>
+                    <p>Mehrere Verbraucher hintereinander in einer Leitung verbunden.</p>
+                    <ul>
+                        <li>Widerstände addieren sich: Rges = R1 + R2</li>
+                        <li>Strom überall gleich</li>
+                        <li>Problem: Ausfallrisiko (eine Lampe = alle aus)</li>
+                    </ul>
+                </div>
+                <div class="schema-card">
+                    <h3>Sch6: Parallelschaltung</h3>
+                    <p>Mehrere Verbraucher parallel zueinander verbunden.</p>
+                    <ul>
+                        <li>Leitwerte addieren: 1/Rges = 1/R1 + 1/R2</li>
+                        <li>Spannung überall gleich</li>
+                        <li>Vorteil: Unabhängiger Betrieb (Standard in Häusern)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="settings-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeSettings()">&times;</span>
