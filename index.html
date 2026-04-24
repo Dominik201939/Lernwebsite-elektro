@@ -223,8 +223,126 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Stromlaufschema -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>📋 Stromlaufschema</h2>
+                        <p>Einpolig & Mehrpolig</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Stromlaufschema</h2>
+                        <p><strong>Einpoliges Schema:</strong> Zeigt nur eine Phase (L) + Neutralleiter (N)</p>
+                        <p><strong>Mehrpoliges Schema:</strong> Zeigt alle 3 Phasen (L1, L2, L3) + N</p>
+                        <ul>
+                            <li>Einpolig: vereinfachte Darstellung</li>
+                            <li>Mehrpolig: vollständige Darstellung</li>
+                            <li>Für Drehstrom (3~): Mehrpolig notwendig</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ein/Aus-Schaltung -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>🔌 Ein/Aus-Schaltung</h2>
+                        <p>Einfacher Schalter</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Ein/Aus-Schaltung</h2>
+                        <p>Die einfachste Schaltung: ein Schalter steuert ein Gerät.</p>
+                        <ul>
+                            <li>Ein Schalter trennt/verbindet den Stromkreis</li>
+                            <li>Der Schalter ist in Serie mit dem Verbraucher</li>
+                            <li>Anwendung: Lampe, Motor, etc.</li>
+                            <li>Symbol: Einfacher Schalter ─o─</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serienschaltung (Reihenschaltung) -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>⛓️ Serienschaltung</h2>
+                        <p>Reihenschaltung</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Serienschaltung (Reihenschaltung)</h2>
+                        <p>Mehrere Verbraucher hintereinander geschaltet.</p>
+                        <ul>
+                            <li>Widerstände addieren: Rges = R1 + R2 + R3</li>
+                            <li>Strom ist überall gleich: I = I1 = I2</li>
+                            <li>Spannungen addieren: U = U1 + U2</li>
+                            <li>Nachteil: Wenn eine Lampe ausfällt, alle aus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wechselschaltung -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>🔄 Wechselschaltung</h2>
+                        <p>2 Schalter steuern 1 Lampe</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Wechselschaltung</h2>
+                        <p>Zwei Schalter an verschiedenen Orten steuern das gleiche Gerät.</p>
+                        <ul>
+                            <li>2 Umschalter (Wechselschalter) an 2 Orten</li>
+                            <li>Von beiden Stellen EIN und AUS möglich</li>
+                            <li>Anwendung: Treppenhaus, Flur</li>
+                            <li>Verdrahtung: Cross-Connection zwischen den Schaltern</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kreuzschaltung -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>✕ Kreuzschaltung</h2>
+                        <p>3 oder mehr Schalter</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Kreuzschaltung</h2>
+                        <p>Drei oder mehr Schalter an verschiedenen Orten steuern das gleiche Gerät.</p>
+                        <ul>
+                            <li>Mindestens 2 Wechselschalter + Kreuzschalter(n)</li>
+                            <li>Von allen Stellen EIN und AUS möglich</li>
+                            <li>Anwendung: Lange Flure, Galerien, 3+ Etagen</li>
+                            <li>Der Kreuzschalter invertiert das Signal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reihen- und Parallelschaltung Kombiniert -->
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h2>🔗 Gemischte Schaltung</h2>
+                        <p>Reihen + Parallel</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Gemischte Schaltung (Reihen + Parallel)</h2>
+                        <p>Kombination aus Reihen- und Parallelschaltung.</p>
+                        <ul>
+                            <li>Erst Reihen berechnen: R1 + R2 = Rx</li>
+                            <li>Dann Parallel: 1/Rges = 1/Rx + 1/R3</li>
+                            <li>Oder umgekehrt, je nach Schaltbild</li>
+                            <li>Praktisch: Most real-world circuits use this</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
     <!-- Settings Modal -->
     <div id="settings-modal" class="modal">
