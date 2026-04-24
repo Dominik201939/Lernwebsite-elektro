@@ -13,6 +13,40 @@ function selectLehrjahr(lehrjahr) {
 function goHome() {
     document.getElementById('formulas-page').style.display = 'none';
     document.getElementById('home-page').style.display = 'block';
+    document.getElementById('formula-search').value = '';
+    searchFormulas();
+}
+
+// Search function
+function searchFormulas() {
+    const searchInput = document.getElementById('formula-search').value.toLowerCase();
+    const cards = document.querySelectorAll('.flip-card');
+    let visibleCount = 0;
+    
+    cards.forEach(card => {
+        const title = card.querySelector('.flip-card-front h2')?.textContent.toLowerCase() || '';
+        const formula = card.querySelector('.flip-card-front p')?.textContent.toLowerCase() || '';
+        const description = card.querySelector('.flip-card-back h2')?.textContent.toLowerCase() || '';
+        const content = card.querySelector('.flip-card-back')?.textContent.toLowerCase() || '';
+        
+        // Kombiniere alle Texte für die Suche
+        const fullText = title + ' ' + formula + ' ' + description + ' ' + content;
+        
+        if (searchInput === '' || fullText.includes(searchInput)) {
+            card.style.display = 'block';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // Zeige die Anzahl der Ergebnisse
+    const resultText = document.getElementById('search-result');
+    if (searchInput === '') {
+        resultText.textContent = '';
+    } else {
+        resultText.textContent = `${visibleCount} Formel${visibleCount !== 1 ? 'n' : ''} gefunden`;
+    }
 }
 
 function openSettings() {

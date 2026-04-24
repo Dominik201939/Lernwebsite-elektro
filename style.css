@@ -212,6 +212,36 @@ h1 {
     background-color: rgba(255,255,255,0.3);
 }
 
+/* Search Container */
+.search-container {
+    margin: 20px 0 30px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#formula-search {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#formula-search::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+#formula-search:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.15);
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -452,6 +482,21 @@ body.dark-mode .flip-card-back ul {
 
 body.dark-mode .ckw-logo {
     filter: brightness(1); /* Normales Logo für Darkmode */
+}
+
+body.dark-mode #formula-search {
+    background-color: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
+    color: #e0e0e0;
+}
+
+body.dark-mode #formula-search::placeholder {
+    color: rgba(224,224,224,0.4);
+}
+
+body.dark-mode #formula-search:focus {
+    border-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.1);
 }
 
 /* Modal Styles */

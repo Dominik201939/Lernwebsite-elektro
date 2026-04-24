@@ -35,6 +35,11 @@
         <button class="back-btn" onclick="goHome()">← Zurück</button>
         <h2 id="lehrjahr-title">Formeln - 1. Lehrjahr</h2>
         
+        <div class="search-container">
+            <input type="text" id="formula-search" placeholder="🔍 Suche Formeln (z.B. 'Ohm', 'Leistung')" onkeyup="searchFormulas()">
+            <p id="search-result" style="color: #fff; font-size: 0.9em; margin-top: 5px;"></p>
+        </div>
+        
         <div class="container">
             <!-- Ohmsches Gesetz -->
             <div class="flip-card" onclick="flipCard(this)">
